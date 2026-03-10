@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOEIC Focus - Từ vựng & Ngữ pháp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>TOEIC Focus</h1>
+        <p>Ứng dụng học TOEIC tập trung vào <strong>từ vựng</strong> và <strong>ngữ pháp</strong>.</p>
+      </header>
+
+      <section class="stats" aria-label="Tiến độ học tập">
+        <article>
+          <h2 id="vocab-score">0/0</h2>
+          <p>Từ vựng đã nhớ</p>
+        </article>
+        <article>
+          <h2 id="grammar-score">0/0</h2>
+          <p>Ngữ pháp đúng</p>
+        </article>
+      </section>
+
+      <nav class="tabs" aria-label="Chọn chế độ học">
+        <button class="tab-btn active" data-tab="vocab">Học từ vựng</button>
+        <button class="tab-btn" data-tab="grammar">Luyện ngữ pháp</button>
+      </nav>
+
+      <section id="vocab" class="tab-panel active" aria-live="polite">
+        <div class="card" id="vocab-card">
+          <h3 id="vocab-word">Loading...</h3>
+          <p id="vocab-meaning">Nhấn "Hiện nghĩa" để xem.</p>
+          <div class="actions">
+            <button id="show-meaning">Hiện nghĩa</button>
+            <button id="mark-known" class="success">Đã thuộc</button>
+            <button id="next-word">Từ tiếp theo</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="grammar" class="tab-panel" aria-live="polite">
+        <div class="card">
+          <h3 id="grammar-question">Loading...</h3>
+          <div id="grammar-options" class="options"></div>
+          <p id="grammar-feedback" class="feedback"></p>
+          <div class="actions">
+            <button id="next-grammar">Câu tiếp theo</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
