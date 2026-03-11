@@ -1,0 +1,151 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --primary: #284bce;
+  --text: #1b2430;
+  --muted: #5b6675;
+  --success: #1e9249;
+  --border: #dde3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stats article {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stats h2 {
+  margin: 0;
+}
+
+.stats p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tab-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tab-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+button {
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 10px 13px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button.success {
+  background: #e8f8ef;
+  border-color: #bde7cc;
+  color: var(--success);
+}
+
+.options {
+  display: grid;
+  gap: 8px;
+}
+
+.option-btn {
+  text-align: left;
+}
+
+.feedback {
+  min-height: 26px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.feedback.ok {
+  color: var(--success);
+}
+
+.feedback.nope {
+  color: #b42318;
+}
+
+@media (max-width: 620px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
